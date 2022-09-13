@@ -1,0 +1,35 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A nosql social network api application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node utils/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flipper5001/social-network-api.git"
+  },
+  "keywords": [
+    "social",
+    "network",
+    "api"
+  ],
+  "author": "Flipper5001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flipper5001/social-network-api/issues"
+  },
+  "homepage": "https://github.com/Flipper5001/social-network-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  }
+}
