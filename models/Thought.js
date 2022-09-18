@@ -31,7 +31,6 @@ const thoughtSchema = new Schema(
             minLength: 1,
             maxLength: 280,
         },
-        // not recommended to do, instead try make a foreign key (username)
     username: {
         type: String,
         required: true
