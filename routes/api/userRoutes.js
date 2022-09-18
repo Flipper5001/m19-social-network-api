@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Thought } = require('../../models');
 
-// find all
+// find all users
 router.get('/users', (req, res) => {
     try {
         User.find()
@@ -11,7 +11,7 @@ router.get('/users', (req, res) => {
     }
 });
 
-// find by id
+// find user by id
 router.get('/users/:id', (req, res) => {
     try {
         User.findOne({ _id: req.params.id })
@@ -47,7 +47,7 @@ router.put('/users/:id', (req, res) => {
     }
 });
     
-// del user
+// delete user
 router.delete('/users/:id', (req, res) => {
     try {
         User.findOneAndDelete({ _id: req.params.id })
@@ -76,7 +76,7 @@ router.post('/users/:id/friends/:friendId', (req, res) => {
     }
 })
 
-// del friend
+// delete existing friend
 router.delete('/users/:id/friends/:friendId', (req, res) => {
     try {
         User.findOneAndUpdate(
