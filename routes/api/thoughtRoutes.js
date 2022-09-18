@@ -11,7 +11,7 @@ router.get('/thoughts', (req, res) => {
     }
 });
 
-// find by id
+// find thought by id
 router.get('/thoughts/:id', (req, res) => {
     try {
         Thought.findOne({ _id: req.params.id })
@@ -55,7 +55,7 @@ router.put('/thoughts/:id', (req, res) => {
     }
 });
     
-// del thought
+// delete existing thought
 router.delete('/thoughts/:id', (req, res) => {
     try {
         Thought.findOneAndDelete({ _id: req.params.id })
@@ -89,7 +89,7 @@ router.post('/thoughts/:id/reactions', (req, res) => {
     }
 })
 
-// del reaction
+// delete exisitng reaction
 router.delete('/thoughts/:id/reactions/:reactionId', (req, res) => {
     try {
         Thought.findOneAndUpdate(
